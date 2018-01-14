@@ -2,21 +2,8 @@ body {
     font-family: 'Muli', sans-serif;
 }
 
-
 #start {
-    margin-top: 40px;
-    margin-right: 50px;
+    margin-top: 200px;
+    margin-right: 150px;
     text-align: right;
-}
-
-#start button {
-    font-weight: 300;
-    border: 0;
-    box-shadow: 0;
-    color: #FFFFFF;
-    background-color: #33235f;
-    text-align: left;
-    padding: 13px;
-    font-size: 16px;
-    width: 170px;
 }
