@@ -2,12 +2,12 @@ body {
     margin: 0;
     padding: 0;
     background-color: white;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Muli', sans-serif;
 }
 
 #bar {
     text-align: center;
-    background-color: whitesmoke;
+    background-color: white;
     height: 85px;
     top: 0;
     padding-top: 20px;
@@ -17,7 +17,7 @@ body {
     display: inline-block;
     float: right;
     color: white;
-    margin-top: 25px;
+    margin-top: 27px;
     margin-right: 40px;
 }
 
@@ -62,6 +62,6 @@ body {
 
 #ubar {
     background-color: #33235f;
-    height: 12px;
+    height: 2px;
     vertical-align: bottom;
 }
