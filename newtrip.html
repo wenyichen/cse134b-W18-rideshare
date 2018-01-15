@@ -6,10 +6,10 @@
         <title> Ride with shuuu </title>
         <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700" rel="stylesheet">
         <link rel="stylesheet" href="./css/main.css" type="text/css" media="screen"/>
-        <link rel="stylesheet" href="./css/index.css" type="text/css" media="screen"/>
+        <link rel="stylesheet" href="./css/newtrip.css" type="text/css" media="screen"/>
     </head>
     <body>
-      <div id="bar">
+        <div id="bar">
       	    <div id="title">
       	        <h1><a href="./index.html">shuuu</a></h1>
       	    </div>
@@ -22,10 +22,18 @@
                 </ul>
             </div>
         </div>
-        <div id="start">
-            <form> 
-                <button formaction="./newtrip.html">Get Started!</button>
-            </form>
+        <form id="typeselect">
+            <p>I want to:</p>
+            <div>
+                <input type="radio" checked="checked" id="_findtrip" name="type" value="find">
+                <label class="container" for="_findtrip">Find a Trip</label>
+                <input type="radio" checked="checked" id="_plantrip" name="type" value="plan">
+                <label class="container" for="_plantrip">Plan a Trip</label>
+            </div>
+        </form>
+        <div id="findtrip">
+        </div>
+        <div id="plantrip">
         </div>
     </body>
 </html>

@@ -2,10 +2,6 @@ body {
     font-family: 'Muli', sans-serif;
 }
 
-#trips {
-  margin-top: 40px;
-}
-
 .decline{
   color: black;
   background-color: white;
@@ -13,7 +9,7 @@ body {
 }
 
 .trip {
-  height: 150px;
+  height: 170px;
   margin-left: 150px;
   margin-right: 150px;
   margin-top: 25px;
