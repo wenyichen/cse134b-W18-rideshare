@@ -25,6 +25,10 @@
     font-size: 18px;
 }
 
+#typeselect::after {
+    clear: right;
+}
+
 #newtripbox {
     z-index: 2;
     height: 400px;
@@ -42,9 +46,6 @@
     vertical-align: bottom;
 }
 
-#continue-button::after {
-    clear: right;
-}
 
 li {
     display: block;

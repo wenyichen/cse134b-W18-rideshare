@@ -24,6 +24,6 @@ body {
   float: right;
 }
 
-.trip button::after {
+.trip::after {
   clear: right;
 }
