@@ -6,11 +6,18 @@ body {
     font-family: 'Muli', sans-serif;
 }
 
+#bar::after {
+    clear: both;
+}
+
 #bar {
     text-align: center;
     background-color: #33235f;
     height: 70px;
     top: 0;
+}
+
+#nav::after{
     clear: both;
 }
 
@@ -23,11 +30,14 @@ body {
     clear: both;
 }
 
+#nav ul::after {
+    clear: both;
+}
+
 #nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    clear: both;
     overflow: hidden;
     height: inherit;
 }
