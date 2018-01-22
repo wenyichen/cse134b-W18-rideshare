@@ -18,7 +18,7 @@ body {
 }
 
 #nav::after{
-    clear: right;
+    clear: none;
 }
 
 #nav {
@@ -30,7 +30,7 @@ body {
 }
 
 #nav ul::after {
-    clear: left;
+    clear: none;
 }
 
 #nav ul {
