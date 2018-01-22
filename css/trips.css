@@ -27,3 +27,8 @@ body {
 .trip::after {
   clear: right;
 }
+
+.trip form::after {
+  clear: right;
+}
+
