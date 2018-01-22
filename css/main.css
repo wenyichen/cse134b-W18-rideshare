@@ -18,7 +18,7 @@ body {
 }
 
 #nav::after{
-    clear: left;
+    clear: right;
 }
 
 #nav {
