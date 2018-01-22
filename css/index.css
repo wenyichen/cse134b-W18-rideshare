@@ -3,23 +3,3 @@
     margin-right: 100px;
     text-align: right;
 }
-
-#middlebar {
-    padding: 30px 0px 30px 0px;
-    margin-top: 200px;
-    height: 100px;
-    width: 100%;
-    background-color: #33235f;
-    text-align: center;
-}
-
-#middlebar h1 {
-    margin: 0;
-}
-
-#middlebar a {
-    color: white;
-    font-weight: 700;
-    font-size: 65px;
-    text-decoration:  none;
-}
