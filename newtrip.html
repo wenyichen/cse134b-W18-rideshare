@@ -29,13 +29,15 @@
                 <p>I am a:</p>
             </div>
             <form id="typeselect">
-                <div>
+                <div class="radio">
                     <input type="radio" checked="checked" id="_findtrip" name="type" value="find">
-                    <label class="container" for="_findtrip">Find a Trip</label>
-                    <br />
-                    <input type="radio" checked="checked" id="_plantrip" name="type" value="plan">
-                    <label class="container" for="_plantrip">Plan a Trip</label>
+                    <label class="container" for="_findtrip">Rider</label>
                 </div>
+                <div class="radio">
+                    <input type="radio" id="_plantrip" name="type" value="plan">
+                    <label class="container" for="_plantrip">Driver</label>
+                </div>
+                <button id="continue-button">Continue</button>
             </form>
             <div id="findtrip">
             </div>

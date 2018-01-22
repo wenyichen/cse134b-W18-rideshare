@@ -13,6 +13,16 @@
 
 #typeselect {
     font-size: 15px;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+#typeselect input {
+    margin-bottom: 10px;
+}
+
+#typeselect label {
+    font-size: 18px;
 }
 
 #newtripbox {
@@ -21,6 +31,15 @@
     width: 300px;
     background-color: white;
     border: 1px solid gray;
+}
+
+#continue-button {
+    padding-top: 10px;
+    float: right;
+    margin-right: 30px;
+    height: 40px;
+    width: 100px;
+    vertical-align: bottom;
 }
 
 li {
