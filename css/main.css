@@ -7,7 +7,7 @@ body {
 }
 
 #bar::after {
-    clear: left;
+    clear: none;
 }
 
 #bar {
