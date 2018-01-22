@@ -7,7 +7,7 @@ body {
 }
 
 #bar::after {
-    clear: both;
+    clear: left;
 }
 
 #bar {
@@ -18,7 +18,7 @@ body {
 }
 
 #nav::after{
-    clear: both;
+    clear: left;
 }
 
 #nav {
@@ -27,11 +27,10 @@ body {
     height: inherit;
     padding-right: 60px;
     vertical-align: middle;
-    clear: both;
 }
 
 #nav ul::after {
-    clear: both;
+    clear: left;
 }
 
 #nav ul {
