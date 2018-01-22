@@ -23,3 +23,7 @@ body {
   margin-right: 30px;
   float: right;
 }
+
+.trip button::after {
+  clear: right;
+}

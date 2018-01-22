@@ -42,6 +42,10 @@
     vertical-align: bottom;
 }
 
+#continue-button::after {
+    clear: right;
+}
+
 li {
     display: block;
 }
