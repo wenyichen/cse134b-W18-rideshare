@@ -6,7 +6,7 @@
         <title> Ride with shuuu </title>
         <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700" rel="stylesheet">
         <link rel="stylesheet" href="./css/main.css" type="text/css" media="screen"/>
-        <link rel="stylesheet" href="./css/newtrip.css" type="text/css" media="screen"/>
+        <link rel="stylesheet" href="./css/start.css" type="text/css" media="screen"/>
     </head>
     <body>
         <div id="bar">
@@ -24,25 +24,21 @@
         </div>
         <div id="middlebar">
         </div>
-        <div class="middlebox" id="newtripbox">
+        <div class="middlebox" id="start-box">
             <div id="middlebox-topbar">
                 <p>I am a:</p>
             </div>
-            <form id="typeselect">
-                <div class="radio">
+            <form id="login-form">
+                <div class="radio-input">
                     <input type="radio" checked="checked" id="_findtrip" name="type" value="find">
                     <label class="container" for="_findtrip">Rider</label>
                 </div>
-                <div class="radio">
+                <div class="radio-input">
                     <input type="radio" id="_plantrip" name="type" value="plan">
                     <label class="container" for="_plantrip">Driver</label>
                 </div>
                 <button id="continue-button">Continue</button>
             </form>
-            <div id="findtrip">
-            </div>
-            <div id="plantrip">
-            </div>
         </div>
     </body>
 </html>

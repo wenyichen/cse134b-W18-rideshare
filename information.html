@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title> Ride with shuuu </title>
+        <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700" rel="stylesheet">
+        <link rel="stylesheet" href="./css/main.css" type="text/css" media="screen"/>
+        <link rel="stylesheet" href="./css/information.css" type="text/css" media="screen"/>
+    </head>
+    <body>
+        <div id="bar">
+      	    <div id="title">
+      	        <h1><a href="./index.html">shuuu</a></h1>
+      	    </div>
+            <div id="nav">
+                <ul>
+                    <li><a href="./account.html">My Account</a></li>
+                    <li><a href="./trips.html">My Trips</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="overlay">
+        </div>
+        <div id="middlebar">
+        </div>
+        <div class="middlebox" id="start-box">
+            <div id="middlebox-topbar">
+                <p>I am a:</p>
+            </div>
+            <form id="start-form">
+                <div class="radio-input">
+                    <input type="radio" checked="checked" id="_findtrip" name="type" value="find">
+                    <label class="container" for="_findtrip">Rider</label>
+                </div>
+                <div class="radio-input">
+                    <input type="radio" id="_plantrip" name="type" value="plan">
+                    <label class="container" for="_plantrip">Driver</label>
+                </div>
+                <button id="continue-button">Continue</button>
+            </form>
+            <div id="findtrip">
+            </div>
+            <div id="plantrip">
+            </div>
+        </div>
+    </body>
+</html>

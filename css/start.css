@@ -11,25 +11,25 @@
     height: 100%;
 }
 
-#typeselect {
+#start-form {
     font-size: 15px;
     margin-left: 20px;
     margin-top: 20px;
 }
 
-#typeselect input {
+#start-form input {
     margin-bottom: 10px;
 }
 
-#typeselect label {
+#start-form label {
     font-size: 18px;
 }
 
-#typeselect::after {
+#start-form::after {
     clear: right;
 }
 
-#newtripbox {
+#start-box {
     z-index: 2;
     height: 200px;
     width: 300px;
@@ -48,6 +48,10 @@
     vertical-align: bottom;
 }
 
+.radio-input {
+    padding-top: 20px;
+    padding-left: 20px;
+}
 
 li {
     display: block;
