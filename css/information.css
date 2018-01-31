@@ -11,28 +11,65 @@
     height: 100%;
 }
 
-#typeselect {
+#info-form {
     font-size: 15px;
     margin-left: 20px;
     margin-top: 20px;
 }
 
-#typeselect input {
-    margin-bottom: 10px;
+#info-form input {
+    float: right;
 }
 
-#typeselect label {
+#info-form label {
     font-size: 18px;
 }
 
-#typeselect::after {
+#info-form::after {
     clear: right;
 }
 
-#start-box {
+.text-input {
+    margin-bottom: 10px;
+    padding-right: 20px;
+}
+
+.date-input {
+    margin-bottom: 10px;
+    padding-right: 20px;
+}
+
+.num-input {
+    margin-bottom: 10px;
+    padding-right: 20px;
+}
+
+.tel-input {
+    margin-bottom: 10px;
+    padding-right: 20px;
+}
+
+#notes_label {
+    display: block;
+}
+
+.note-input {
+    display: block;
+    padding-right: 30px;
+}
+
+.note-input textarea {
+    width: 100%;
+}
+
+.note-input::after {
+    clear: both;
+}
+
+#info-box {
     z-index: 2;
-    height: 200px;
-    width: 300px;
+    height: 450px;
+    width: 400px;
     background-color: white;
     border: 1px solid gray;
 }

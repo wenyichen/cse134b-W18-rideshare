@@ -24,18 +24,38 @@
         </div>
         <div id="middlebar">
         </div>
-        <div class="middlebox" id="start-box">
+        <div class="middlebox" id="info-box">
             <div id="middlebox-topbar">
-                <p>I am a:</p>
+                <p>Find riders:</p>
             </div>
-            <form id="start-form">
-                <div class="radio-input">
-                    <input type="radio" checked="checked" id="_findtrip" name="type" value="find">
-                    <label class="container" for="_findtrip">Rider</label>
+            <form id="info-form">
+                <div class="text-input">
+                    <label class="container" for"_depart">Departing From:</label>
+                    <input type="text" id="_depart" name="depart" value="">
                 </div>
-                <div class="radio-input">
-                    <input type="radio" id="_plantrip" name="type" value="plan">
-                    <label class="container" for="_plantrip">Driver</label>
+                <div class="text-input">
+                    <label class="container" for"_dest">Destination:</label>
+                    <input type="text" id="_dest" name="dest" value="">
+                </div>
+                <div class="date-input">
+                    <label class="container" for"_depart">Date of Trip:</label>
+                    <input type="date" id="_depart" name="dest" value="">
+                </div>
+                <div class="text-input">
+                    <label class="container" for"_type">Type of Car:</label>
+                    <input type="text" id="_type" name="type" value="">
+                </div>
+                <div class="num-input">
+                    <label class="container" for"_seats">Number of Seats:</label>
+                    <input type="number" id="_seats" name="seats" value="4">
+                </div>
+                <div class="tel-input">
+                    <label class="container" for"_tel">Phone Number:</label>
+                    <input type="tel" id="_tel" name="tel" value="">
+                </div>
+                <div class="note-input">
+                    <label class="container" id="notes_label" for"_notes">Notes:</label>
+                    <textarea id="_notes" rows="5" name="notes" value=""></textarea>
                 </div>
                 <button id="continue-button">Continue</button>
             </form>
