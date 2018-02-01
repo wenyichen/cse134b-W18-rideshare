@@ -40,12 +40,11 @@ body {
 
 .chat {
   height: 170px;
-  margin-top: 5px;
   margin-left: 150px;
   margin-right: 150px;
-  background-color: whitesmoke;
+  background-color: lightgrey;
   border: 1px solid #8e77bc;
-  border-radius: 3px;
+  border-radius: 0px 0px 3px 3px;
 }
 
 .location {

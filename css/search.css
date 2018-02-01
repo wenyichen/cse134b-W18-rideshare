@@ -5,7 +5,7 @@ body {
 .decline{
 color: black;
 background-color: white;
-border: 1px solid #8f78bd;
+border: 1px solid #8f78bc;
 }
 
 .result {
@@ -17,7 +17,7 @@ margin-top: 10px;
 margin-left: 150px;
 margin-right: 150px;
 background-color: white;
-border: 1px solid #8e77bc;
+border: 1px solid #604c8d;
 border-radius: 3px;
 }
 
@@ -47,4 +47,17 @@ float: right;
 .status {
 clear: both;
 display: block;
+}
+
+#bar2 {
+  padding-top: 15px;
+  color: white;
+  text-align: center;
+  background-color: #604c8d;
+  height: 50px;
+  top: 0;
+}
+
+#bar2 h3 {
+  margin: 0;
 }
