@@ -27,7 +27,7 @@ margin-right: 10px;
 float: right;
 }
 
-.reuslt::after {
+.result::after {
 clear: right;
 }
 
