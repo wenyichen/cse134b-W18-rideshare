@@ -34,9 +34,17 @@
     padding-right: 20px;
 }
 
+.text-input::after {
+    clear: right;
+}
+
 .date-input {
     margin-bottom: 10px;
     padding-right: 20px;
+}
+
+.date-input::after {
+    clear: right;
 }
 
 .num-input {
@@ -44,9 +52,17 @@
     padding-right: 20px;
 }
 
+.num-input::after {
+    clear: right;
+}
+
 .tel-input {
     margin-bottom: 10px;
     padding-right: 20px;
+}
+
+.tel-input::after {
+    clear: right;
 }
 
 #notes_label {
