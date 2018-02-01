@@ -1,34 +1,50 @@
 body {
-    font-family: 'Muli', sans-serif;
+  font-family: 'Muli', sans-serif;
 }
 
 .decline{
-  color: black;
-  background-color: white;
-  border: 1px solid #8f78bd;
+color: black;
+background-color: white;
+border: 1px solid #8f78bd;
 }
 
-.trip {
-  height: 170px;
-  margin-left: 150px;
-  margin-right: 150px;
-  margin-top: 25px;
-  background-color: white;
-  border: 1px solid #8e77bc;
-  border-radius: 3px;
+.result {
+padding-left: 15px;
+padding-top: 15px;
+padding-right: 15px;
+height: 170px;
+margin-top: 10px;
+margin-left: 150px;
+margin-right: 150px;
+background-color: white;
+border: 1px solid #8e77bc;
+border-radius: 3px;
 }
 
-.trip button {
-  margin-top: 30px;
-  margin-right: 30px;
-  float: right;
+.result button {
+margin-top: 20px;
+margin-right: 10px;
+float: right;
 }
 
-.trip::after {
-  clear: right;
+.reuslt::after {
+clear: right;
 }
 
-.trip form::after {
-  clear: right;
+.result form::after {
+clear: right;
 }
 
+.location {
+display: inline-block;
+}
+
+.date {
+display: block;
+float: right;
+}
+
+.status {
+clear: both;
+display: block;
+}

@@ -9,26 +9,55 @@ body {
 }
 
 .trip {
+  margin-top: 25px;
+}
+
+.info {
+  padding-left: 15px;
+  padding-top: 15px;
+  padding-right: 15px;
   height: 170px;
   margin-left: 150px;
   margin-right: 150px;
-  margin-top: 25px;
   background-color: white;
   border: 1px solid #8e77bc;
   border-radius: 3px;
 }
 
-.trip button {
-  margin-top: 30px;
-  margin-right: 30px;
+.info button {
+  margin-top: 20px;
+  margin-right: 10px;
   float: right;
 }
 
-.trip::after {
+.info::after {
   clear: right;
 }
 
-.trip form::after {
+.info form::after {
   clear: right;
 }
 
+.chat {
+  height: 170px;
+  margin-top: 5px;
+  margin-left: 150px;
+  margin-right: 150px;
+  background-color: whitesmoke;
+  border: 1px solid #8e77bc;
+  border-radius: 3px;
+}
+
+.location {
+  display: inline-block;
+}
+
+.date {
+  display: block;
+  float: right;
+}
+
+.status {
+  clear: both;
+  display: block;
+}
