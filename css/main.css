@@ -1,10 +1,9 @@
+html {
+    height: 100%;
+}
 
 body {
-    background-color: gray;
-    background-image: url('../img/background.jpeg');
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    height: 100%;
     margin: 0;
     padding: 0;
     padding-bottom: 50px;
@@ -110,31 +109,16 @@ button {
     width: 150px;
 }
 
-#middlebar h1 {
-    margin: 0;
-}
-
-#middlebar a {
-    color: white;
-    font-weight: 700;
-    font-size: 65px;
-    text-decoration:  none;
-}
-
-#middlebar {
-    padding: 30px 0px 30px 0px;
-    margin-top: 200px;
-    height: 100px;
+#mb-container {
+    height: 100%;
     width: 100%;
-    background-color: #33235f;
-    text-align: center;
 }
 
 .middlebox {
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    display: table;
+    border-radius: 7px;
+    margin: 0 auto;
+    margin-top: 60px;
 }
 
 #middlebox-topbar {

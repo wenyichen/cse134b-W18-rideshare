@@ -23,23 +23,23 @@
         </div>
         <div id="overlay">
         </div>
-        <div id="middlebar">
-        </div>
-        <div class="middlebox" id="start-box">
-            <div id="middlebox-topbar">
-                <p>I am a:</p>
+        <div id="mb-container">
+            <div class="middlebox" id="start-box">
+                <div id="middlebox-topbar">
+                    <p>I am a:</p>
+                </div>
+                <form id="start-form" action="./information.html">
+                    <div class="radio-input">
+                        <input type="radio" checked="checked" id="_findtrip" name="type" value="find">
+                        <label class="container" for="_findtrip">Rider</label>
+                    </div>
+                    <div class="radio-input">
+                        <input type="radio" id="_plantrip" name="type" value="plan">
+                        <label class="container" for="_plantrip">Driver</label>
+                    </div>
+                    <button type="submit" id="continue-button">Continue</button>
+                </form>
             </div>
-            <form id="start-form" action="./information.html">
-                <div class="radio-input">
-                    <input type="radio" checked="checked" id="_findtrip" name="type" value="find">
-                    <label class="container" for="_findtrip">Rider</label>
-                </div>
-                <div class="radio-input">
-                    <input type="radio" id="_plantrip" name="type" value="plan">
-                    <label class="container" for="_plantrip">Driver</label>
-                </div>
-                <button type="submit" id="continue-button">Continue</button>
-            </form>
         </div>
     </body>
 </html>
