@@ -67,3 +67,13 @@ body {
 .buttons button {
   display: inline-block;
 }
+
+@media screen and (max-width: 768px) {
+  .info {
+    width: 90%;
+  }
+
+  .chat {
+    width: 90%;
+  }
+}
