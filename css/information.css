@@ -29,11 +29,17 @@ body {
 }
 
 #info-form input {
-    float: right;
+    font-size: 14px;
+    float: left;
+    clear: both;
+    margin-top: 2px;
 }
 
 #info-form label {
-    font-size: 18px;
+    font-size: 13px;
+    text-transform: uppercase;
+    float: left;
+    clear: both;
 }
 
 #info-form::after {
@@ -41,6 +47,7 @@ body {
 }
 
 .text-input {
+    overflow: hidden;
     margin-bottom: 10px;
     padding-right: 20px;
 }
@@ -50,6 +57,7 @@ body {
 }
 
 .date-input {
+    overflow: hidden;
     margin-bottom: 10px;
     padding-right: 20px;
 }
@@ -59,6 +67,7 @@ body {
 }
 
 .num-input {
+    overflow: hidden;
     margin-bottom: 10px;
     padding-right: 20px;
 }
@@ -68,6 +77,7 @@ body {
 }
 
 .tel-input {
+    overflow: hidden;
     margin-bottom: 10px;
     padding-right: 20px;
 }
@@ -81,12 +91,14 @@ body {
 }
 
 .note-input {
+    overflow: hidden;
     display: block;
     margin-bottom: 10px;
     padding-right: 30px;
 }
 
 .note-input textarea {
+    font-size: 14px;
     width: 100%;
 }
 
