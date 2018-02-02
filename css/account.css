@@ -8,6 +8,10 @@ body {
   background-attachment: fixed;
 }
 
+#bar {
+  z-index: 2;
+}
+
 #overlay {
   z-index: -1;
   background-color: black;
@@ -19,41 +23,89 @@ body {
   height: 100%;
 }
 
-#info-box {
-  z-index: 2;
+#acc-form {
   overflow: hidden;
+  font-size: 15px;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+#_tel, #_name {
+  font-size: 15px;
+  text-transform: uppercase;
+  float: left;
+  clear: both;
+}
+
+#acc-form input {
+  font-size: 14px;
+  text-transform: uppercase;
+  float: left;
+  clear: both;
+}
+
+#acc-form label {
+  font-size: 13px;
+  text-transform: uppercase;
+  float: left;
+  clear: both;
+}
+
+#signup-form::after {
+  clear: right;
+}
+
+#tel-display {
+  overflow: hidden;
+  margin-bottom: 10px;
+  padding-right: 20px;
+}
+
+#tel-display::after {
+  clear: left;
+}
+
+#name-display {
+  overflow: hidden;
+  margin-bottom: 10px;
+  padding-right: 20px;
+}
+
+#name-display::after {
+  clear: left;
+}
+
+.text-input {
+  overflow: hidden;
+  margin-bottom: 10px;
+  padding-right: 20px;
+}
+
+.text-input::after {
+  clear: left;
+}
+
+#acc-box {
+  overflow: hidden;
+  z-index: 2;
   width: 40%;
   background-color: white;
 }
-#name {
-  color:white;
-  font-size: 50px;
+
+#save-button {
+  position: relative;
+  padding-top: 10px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  float: right;
+  bottom: 0px;
+  height: 40px;
+  width: 100px;
+  vertical-align: bottom;
 }
 
-#account-info {
-  font-size: 15px;
-  overflow: hidden;
-  /*margin-left: 20px;
-  margin-top: 20px;
-  margin-bottom: 20px;*/
-  padding:20px;
-}
-
-.container{ 
-  float: left;
-  clear: both;
-}
-.text-input {
-  clear: both;
-}
-.text-input input{
-  clear: both;
-  float: left;
-}
-
-#resetPass {
-  float:right;
-  font-size: 10px;
+li {
+  display: block;
 }
 
 @media screen and (max-width: 768px) {
@@ -62,11 +114,8 @@ body {
       background-size: auto 100%;
   }
 
-  #info-box {
-    width: 90%;
-  }
-
-  #account-info {
-    font-size: 20px;
+  #signup-box {
+      width: 90%;
   }
 }
+
