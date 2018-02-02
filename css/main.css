@@ -141,11 +141,12 @@ button {
     }
 
     #nav li {
-        width: 100%;
+        width: 50%;
         text-align: center;
         display: block;
-        clear: both;
+        /*clear: both;*/
         height: 70px;
+        opacity: 0.7;
     }
 
     #nav a {
