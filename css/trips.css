@@ -41,7 +41,8 @@ body {
 }
 
 .chat {
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: none;
   height: 100px;
   padding: 15px;
   margin: 0px auto;
