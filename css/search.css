@@ -18,13 +18,10 @@ border: 1px solid #8f78bc;
 }
 
 .result {
-padding-left: 15px;
-padding-top: 15px;
-padding-right: 15px;
-height: 170px;
-margin-top: 10px;
-margin-left: 150px;
-margin-right: 150px;
+overflow: hidden;
+width: 80%;
+padding: 20px;
+margin: 10px auto;
 background-color: white;
 border: 1px solid #604c8d;
 border-radius: 3px;
@@ -34,6 +31,10 @@ border-radius: 3px;
 margin-top: 20px;
 margin-right: 10px;
 float: right;
+}
+
+.result:hover{
+  background-color: #8f78bd;
 }
 
 .result::after {
@@ -69,4 +70,10 @@ display: block;
 
 #bar2 h3 {
   margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .result {
+    width: 90%;
+  }
 }
