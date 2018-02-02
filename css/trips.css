@@ -71,6 +71,7 @@ body {
 
 .buttons button {
   display: inline-block;
+  float: none;
 }
 
 @media screen and (max-width: 768px) {
