@@ -103,10 +103,10 @@ button {
     box-shadow: 0;
     color: #FFFFFF;
     background-color: #33235f;
-    text-align: left;
+    text-align: center;
     padding: 13px;
     font-size: 16px;
-    width: 150px;
+    width: 130px;
 }
 
 #mb-container {
@@ -134,7 +134,7 @@ button {
 #middlebox-topbar p{
     color: white;
     margin: 0;
-    margin-left: 10px;
+    margin-left: 20px;
     vertical-align: middle;
     font-size: 20px;
 }

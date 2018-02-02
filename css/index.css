@@ -47,4 +47,8 @@ button {
         background-position: center;
         background-size: auto 100%;
     }
+
+    #middlebar a {
+        font-size: 100px;
+    }
 }

@@ -1,5 +1,10 @@
 body {
-    font-family: 'Muli', sans-serif;
+  z-index: -2;
+  background-color: gray;
+  background-image: url('https://maps.googleapis.com/maps/api/staticmap?center=La+Jolla&zoom=10&size=2048x1152&maptype=roadmap&key=AIzaSyCGCKZWjbJ7E1cgRiD5r748YZvDtFkLaLY');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .decline{
@@ -13,12 +18,10 @@ body {
 }
 
 .info {
-  padding-left: 15px;
-  padding-top: 15px;
-  padding-right: 15px;
-  height: 170px;
-  margin-left: 150px;
-  margin-right: 150px;
+  overflow: hidden;
+  padding: 15px;
+  margin: 0px auto;
+  width: 75%;
   background-color: white;
   border: 1px solid #8e77bc;
   border-radius: 3px;
@@ -39,9 +42,9 @@ body {
 }
 
 .chat {
-  height: 170px;
-  margin-left: 150px;
-  margin-right: 150px;
+  padding: 15px;
+  margin: 0px auto;
+  width: 75%;
   background-color: lightgrey;
   border: 1px solid #8e77bc;
   border-radius: 0px 0px 3px 3px;
@@ -59,4 +62,8 @@ body {
 .status {
   clear: both;
   display: block;
+}
+
+.buttons button {
+  display: inline-block;
 }

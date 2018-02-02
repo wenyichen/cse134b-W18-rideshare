@@ -1,7 +1,7 @@
 body {
     z-index: -2;
     background-color: gray;
-    background-image: url('../img/background.jpeg');
+    background-image: url('https://maps.googleapis.com/maps/api/staticmap?center=La+Jolla&zoom=10&size=2048x1152&maptype=roadmap&key=AIzaSyCGCKZWjbJ7E1cgRiD5r748YZvDtFkLaLY');
     background-size: 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -43,7 +43,7 @@ body {
 #start-box {
     z-index: 2;
     height: 200px;
-    width: 300px;
+    width: 40%;
     background-color: white;
     border: 1px solid gray;
 }
@@ -72,6 +72,10 @@ li {
     body {
         background-position: center;
         background-size: auto 100%;
+    }
+    
+    #start-box {
+        width: 90%;
     }
 }
 
