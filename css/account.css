@@ -51,6 +51,11 @@ body {
   float: left;
 }
 
+#resetPass {
+  float:right;
+  font-size: 10px;
+}
+
 @media screen and (max-width: 768px) {
   body {
       background-position: center;
@@ -61,5 +66,7 @@ body {
     width: 90%;
   }
 
-  
+  #account-info {
+    font-size: 20px;
+  }
 }
