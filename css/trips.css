@@ -65,6 +65,10 @@ body {
   display: block;
 }
 
+.buttons::after {
+  clear:left;
+}
+
 .buttons button {
   display: inline-block;
 }
