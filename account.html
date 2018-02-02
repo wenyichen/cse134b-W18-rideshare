@@ -7,7 +7,7 @@
         <title> Ride with shuuu </title>
         <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700" rel="stylesheet">
         <link rel="stylesheet" href="./css/main.css" type="text/css" media="screen"/>
-        <link rel="stylesheet" href="./css/myaccount.css" type="text/css" media="screen"/>
+        <link rel="stylesheet" href="./css/account.css" type="text/css" media="screen"/>
     </head>
     <body>
         <div id="bar">
@@ -16,16 +16,28 @@
       	    </div>
             <div id="nav">
                 <ul>
-                    <li><a href="./account.html">My Account</a></li>
-                    <li><a href="./trips.html">My Trips</a></li>
+                    <li style="width:100%"><a href="./trips.html">My Trips</a></li>
                 </ul>
             </div>
         </div>
-        <div id="finished">
-            <p>Thanks for riding with shuuu!</p>
+        <div id="overlay">
         </div>
-        <div id="review">
-            <p>Rate your trip!</p>
+        <div class="middlebox" id="info-box">
+            <div id="middlebox-topbar">
+                    <p>Account Information:</p>
+            </div>
+            <div id="account-info">
+                <p>NAME: <br> JOHN DOE</p>
+                <p>PHONE NUMBER: <br> 858-592-5928</p>
+                <div class="text-input">
+                    <label class="container" for="_pass">Password</label>
+                    <input type="password" id="_pass" name="pass" value="">
+                </div>
+                <div class="text-input">
+                    <label class="container" for="_confirmpass">Confirm Password</label>
+                    <input type="password" id="_confirmpass" name="confirmpass" value="">
+                </div>
+            </div>
         </div>
     </body>
 </html>
