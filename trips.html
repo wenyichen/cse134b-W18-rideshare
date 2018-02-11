@@ -10,28 +10,6 @@
         <link rel="stylesheet" href="./css/main.css" type="text/css" media="screen"/>
         <link rel="stylesheet" href="./css/trips.css" type="text/css" media="screen"/>
 
-        <script>
-            function showInfo(event) {
-                var elem = event.target;
-                var trip = elem.parentElement.parentElement.parentElement;
-                var chat = null;
-
-                for (var i = 0; i < trip.childNodes.length; i++) {
-                    if (trip.childNodes[i].className == "chat") {
-                        chat = trip.childNodes[i];
-                        break;
-                    }
-                }
-
-                if (elem.innerHTML == "Show More") {
-                    elem.innerHTML = "Show Less";
-                    chat.style.display = "block";
-                } else {
-                    elem.innerHTML = "Show More";
-                    chat.style.display = "none";
-                }
-            }
-        </script>
     </head>
     <body>
         <div id="bar">
@@ -54,7 +32,6 @@
                     <div class="driver">Driver: John</div>
                     <div class="buttons">
                         <button id="show" onclick="showInfo(event);">Show More</button>
-                        <button>Show More</button>
                         <button>Leave a Note</button>
                     </div>
                 </div>
@@ -67,7 +44,6 @@
                     <div class="driver">Driver: You!</div>
                     <div class="buttons">
                         <button id="show" onclick="showInfo(event);">Show Less</button>
-                        <button>Leave a Note</button>
                         <button onclick="window.location.href='inprog.html';">Start Trip</button>
                     </div>
                 </div>
@@ -84,6 +60,10 @@
                     <div class="message">James 1/10/19 3:15pm: Hello!</div>
                     <div class="todo">Upcoming 1/19/19: Trip is scheduled for 1/19/19.</div>
                 </div>
+                <div class="chatbar">
+                    <input type="text" class="chatinput" name="content" value="">
+                    <button type="button" onclick="addMessage(event);">Leave a Note</button>
+                </div>
             </div>
             <div class="trip">
                 <div class="info">
@@ -93,11 +73,52 @@
                     <div class="driver">Driver: Fred</div>
                     <div class="buttons">
                         <button id="show" onclick="showInfo(event);">Show More</button>
-                        <button>Show More</button>
                         <button>Leave a Note</button>
                     </div>
                 </div>
             </div>
         </div>
     </body>
+    <script>
+        function addMessage(event) {        
+            var button = event.target;
+            var cb = button.parentElement;
+            var content = null;
+            for (var i = 0; i < cb.childNodes.length; i++) {
+                if (cb.childNodes[i].className == "chatinput") {
+                    content = cb.childNodes[i].value;
+                    cb.childNodes[i].value = "";
+                    break;
+                }
+            }
+            if (content == "") {
+                return;
+            }
+            var trip = button.parentElement.parentElement;
+            var chat = null;
+            for (var i = 0; i < trip.childNodes.length; i++) {
+                if (trip.childNodes[i].className == "chat") {
+                    chat = trip.childNodes[i];
+                    break;
+                }
+            }
+            var message = document.createElement("div");
+            message.innerHTML = "FillerName "
+                                + new Date().toLocaleString()
+                                + ": " + content;
+            var ind = -1;
+            for (var i = chat.childNodes.length-1; i >=0; i--) {
+                if (chat.childNodes[i].className == "todo"){
+                    ind = i;
+                    break;
+                }
+            }
+            if (ind != -1) {
+                chat.insertBefore(message, chat.childNodes[ind])
+            }
+            else {
+                chat.appendChild(message);
+            }
+        }
+    </script>
 </html>
