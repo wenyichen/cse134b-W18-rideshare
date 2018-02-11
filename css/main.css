@@ -81,6 +81,7 @@ body {
 }
 
 button {
+    cursor: pointer;
     border-radius: 3px;
     font-weight: 300;
     border: 0;
