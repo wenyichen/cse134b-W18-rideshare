@@ -23,7 +23,8 @@ body {
   margin: 0px auto;
   width: 75%;
   background-color: white;
-  border-radius: 3px;
+  border-radius: 3px 3px 0 0;
+  border: 1px solid #8e77bc;
 }
 
 .info button {
@@ -49,7 +50,6 @@ body {
   width: 75%;
   background-color: lightgrey;
   border: 1px solid #8e77bc;
-  border-radius: 0px 0px 3px 3px;
 }
 
 .chatbar {
@@ -58,6 +58,7 @@ body {
   width: 75%;
   background-color: white;
   border: 1px solid #8e77bc;
+  border-radius: 0 0 3px 3px;
   overflow: hidden;
 }
 
