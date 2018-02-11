@@ -22,10 +22,6 @@ body {
     height: 100%;
 }
 
-#start-form {
-    font-size: 14px;
-}
-
 #start-form::after {
     clear: right;
 }
@@ -38,8 +34,9 @@ body {
 }
 
 #rider {
-    padding-top: 15px;
+    vertical-align: middle;
     height: 100px;
+    padding-top: 15px;
     text-align: center;
     font-size: 32px;
 }
@@ -51,8 +48,9 @@ body {
 }
 
 #driver {
-    padding-top: 15px;
+    vertical-align: middle;
     height: 100px;
+    padding-top: 15px;
     text-align: center;
     font-size: 32px;
 }

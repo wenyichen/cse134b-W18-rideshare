@@ -52,6 +52,32 @@ body {
   border-radius: 0px 0px 3px 3px;
 }
 
+.chatbar {
+  display: flex;
+  margin: 0px auto;
+  width: 75%;
+  background-color: white;
+  border: 1px solid #8e77bc;
+  overflow: hidden;
+}
+
+.chatbar::after {
+  clear:left;
+}
+
+.chatbar input {
+  flex: 2;
+  height: auto;
+  margin: 0;
+  border: 0;
+}
+
+.chatbar button {
+  padding: 5px;
+  height: auto;
+  float: right;
+}
+
 .location {
   display: inline-block;
 }
@@ -82,5 +108,13 @@ body {
 
   .chat {
     width: 90%;
+  }
+
+  .chatbar {
+    width: 90%;
+  }
+
+  .chatbar input {
+    width: auto;
   }
 }
