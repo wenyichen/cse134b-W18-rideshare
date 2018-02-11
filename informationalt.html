@@ -7,6 +7,7 @@
         <title> Ride with shuuu </title>
         <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGCKZWjbJ7E1cgRiD5r748YZvDtFkLaLY&libraries=places"></script>
         <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="./css/main.css" type="text/css" media="screen"/>
         <link rel="stylesheet" href="./css/information.css" type="text/css" media="screen"/>
     </head>
@@ -30,30 +31,30 @@
             </div>
             <form id="info-form" method="GET" action="./search.html">
                 <div class="text-input">
-                    <label class="container" for="_depart">Departing From:</label>
+                    <label for="_depart">Departing From:</label>
                     <input type="text" id="_depart" name="depart" value="">
                 </div>
                 <div class="text-input">
-                    <label class="container" for="_dest">Destination:</label>
+                    <label for="_dest">Destination:</label>
                     <input type="text" id="_dest" name="dest" value="">
                 </div>
                 <div class="date-input">
-                    <label class="container" for="_date">Date of Trip:</label>
+                    <label for="_date">Date of Trip:</label>
                     <input type="date" id="_date" name="date" value="">
                 </div>
                 <div class="num-input">
-                    <label class="container" for="_seats">Number of Seats Needed:</label>
+                    <label for="_seats">Number of Seats Needed:</label>
                     <input type="number" id="_seats" name="seats" value="4">
                 </div>
                 <div class="tel-input">
-                    <label class="container" for="_tel">Phone Number:</label>
+                    <label for="_tel">Phone Number:</label>
                     <input type="tel" id="_tel" name="tel" value="">
                 </div>
                 <div class="note-input">
-                    <label class="container" id="notes_label" for="_notes">Notes:</label>
+                    <label id="notes_label" for="_notes">Notes:</label>
                     <textarea id="_notes" rows="5" name="notes"></textarea>
                 </div>
-                <button type="submit" id="continue-button">Continue</button>
+                <button  type="submit" id="continue-button">Continue</button>
             </form>
 
             <script>

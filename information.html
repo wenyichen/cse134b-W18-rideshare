@@ -6,6 +6,7 @@
         <meta charset="utf-8" />
         <title> Ride with shuuu </title>
         <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700" rel="stylesheet">
+        <link rel="stylesheet" href="./css/bootstrap.min.css" type="text/css" media="screen"/>
         <link rel="stylesheet" href="./css/main.css" type="text/css" media="screen"/>
         <link rel="stylesheet" href="./css/information.css" type="text/css" media="screen"/>
     </head>
@@ -29,31 +30,31 @@
             </div>
             <form id="info-form" method="GET" action="./trips.html">
                 <div class="text-input">
-                    <label class="container" for="_depart">Departing From:</label>
+                    <label for="_depart">Departing From:</label>
                     <input id="_depart" type="text" name="depart">
                 </div>
                 <div class="text-input">
-                    <label class="container" for="_dest">Destination:</label>
+                    <label for="_dest">Destination:</label>
                     <input id="_dest" type="text" name="dest">
                 </div>
                 <div class="date-input">
-                    <label class="container" for="_date">Date of Trip:</label>
+                    <label for="_date">Date of Trip:</label>
                     <input type="date" id="_date" name="date">
                 </div>
                 <div class="text-input">
-                    <label class="container" for="_type">Type of Car:</label>
+                    <label for="_type">Type of Car:</label>
                     <input type="text" id="_type" name="type">
                 </div>
                 <div class="num-input">
-                    <label class="container" for="_seats">Number of Seats:</label>
+                    <label for="_seats">Number of Seats:</label>
                     <input type="number" id="_seats" name="seats" value="4">
                 </div>
                 <div class="tel-input">
-                    <label class="container" for="_tel">Phone Number:</label>
+                    <label for="_tel">Phone Number:</label>
                     <input type="tel" id="_tel" name="tel">
                 </div>
                 <div class="note-input">
-                    <label class="container" id="notes_label" for="_notes">Notes:</label>
+                    <label id="notes_label" for="_notes">Notes:</label>
                     <textarea id="_notes" rows="5" name="notes"></textarea>
                 </div>
                 <button type="submit" id="continue-button">Continue</button>

@@ -6,6 +6,7 @@
         <meta charset="utf-8" />
         <title> Ride with shuuu </title>
         <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700" rel="stylesheet">
+        <link rel="stylesheet" href="./css/bootstrap.min.css" type="text/css" media="screen"/>
         <link rel="stylesheet" href="./css/main.css" type="text/css" media="screen"/>
         <link rel="stylesheet" href="./css/start.css" type="text/css" media="screen"/>
     </head>
@@ -29,15 +30,12 @@
                     <p>I am a:</p>
                 </div>
                 <form id="start-form" action="./information.html">
-                    <div class="radio-input">
-                        <input type="radio" checked="checked" id="_findtrip" name="type" value="find">
-                        <label class="container" for="_findtrip">Rider</label>
+                    <div id="rider" onclick="window.location.href='information.html';">
+                        Rider
                     </div>
-                    <div class="radio-input">
-                        <input type="radio" id="_plantrip" name="type" value="plan">
-                        <label class="container" for="_plantrip">Driver</label>
+                    <div id="driver" onclick="window.location.href='informationalt.html';">
+                        Driver
                     </div>
-                    <button type="submit" id="continue-button">Continue</button>
                 </form>
             </div>
         </div>
