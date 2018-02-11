@@ -34,6 +34,8 @@ float: right;
 }
 
 .result:hover{
+  cursor: pointer;
+  color: white;
   background-color: #8f78bd;
 }
 
@@ -60,7 +62,7 @@ display: block;
 }
 
 #bar2 {
-  padding-top: 15px;
+  padding-top: 10px;
   color: white;
   text-align: center;
   background-color: #604c8d;
@@ -68,7 +70,7 @@ display: block;
   top: 0;
 }
 
-#bar2 h3 {
+#bar2 h4 {
   margin: 0;
 }
 
