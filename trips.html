@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8" />
+        <title> Ride with shuuu </title>
+        <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700" rel="stylesheet">
+        <link rel="stylesheet" href="./css/main.css" type="text/css" media="screen"/>
+        <link rel="stylesheet" href="./css/trips.css" type="text/css" media="screen"/>
+
+        <script>
+            function showInfo(event) {
+                var elem = event.target;
+                var trip = elem.parentElement.parentElement.parentElement;
+                var chat = null;
+
+                for (var i = 0; i < trip.childNodes.length; i++) {
+                    if (trip.childNodes[i].className == "chat") {
+                        chat = trip.childNodes[i];
+                        break;
+                    }
+                }
+
+                if (elem.innerHTML == "Show More") {
+                    elem.innerHTML = "Show Less";
+                    chat.style.display = "block";
+                } else {
+                    elem.innerHTML = "Show More";
+                    chat.style.display = "none";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div id="bar">
+      	    <div id="title">
+      	        <h1><a href="./index.html">shuuu</a></h1>
+      	    </div>
+            <div id="nav">
+                <ul>
+                    <li><a href="./account.html">My Account</a></li>
+                    <li><a href="./trips.html">My Trips</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="trips">
+            <div class="trip">
+                <div class="info">
+                    <div class="location">LA 1234 Rand St -> SD 1234 Int St</div>
+                    <div class="date">1/1/19</div>
+                    <div class="status">Status: In Progress</div>
+                    <div class="driver">Driver: John</div>
+                    <div class="buttons">
+                        <button id="show" onclick="showInfo(event);">Show More</button>
+                        <button>Leave a Note</button>
+                    </div>
+                </div>
+            </div>
+            <div class="trip">
+                <div class="info">
+                    <div class="location">LA 1234 Main St -> SD 1234 2nd St</div>
+                    <div class="date">12/19/19</div>
+                    <div class="status">Status: Currently have 2 passengers</div>
+                    <div class="driver">Driver: You!</div>
+                    <div class="buttons">
+                        <button id="show" onclick="showInfo(event);">Show Less</button>
+                        <button>Leave a Note</button>
+                        <button onclick="window.location.href='inprog.html';">Start Trip</button>
+                    </div>
+                </div>
+                <div class="chat">
+                    <div class="notification">Notification 1/1/19 11:32am: Trip has been created!</div>
+                    <div class="notification">Notification 1/1/19 11:32am: You have been added to the trip (Driver)</div>
+                    <div class="notification">Notification 1/2/19 7:35pm: James has requested to join the trip</div>
+                    <div class="notification">Notification 1/2/19 8:32pm: You have approved James's request</div>
+                    <div class="notification">Notification 1/3/19 8:58am: James have been added to the trip</div>
+                    <div class="notification">Notification 1/4/19 6:42am: Sam has requested to join the trip</div>
+                    <div class="notification">Notification 1/4/19 2:21pm: You have approved Sam's request</div>
+                    <div class="notification">Notification 1/4/19 5:40pm: Sam have been added to the trip</div>
+                    <div class="message">You 1/10/19 3:01pm: Hi!</div>
+                    <div class="message">James 1/10/19 3:15pm: Hello!</div>
+                    <div class="todo">Upcoming 1/19/19: Trip is scheduled for 1/19/19.</div>
+                </div>
+            </div>
+            <div class="trip">
+                <div class="info">
+                    <div class="location">LA 1234 Foo St -> SD 1234 Bar St</div>
+                    <div class="date">2/1/19</div>
+                    <div class="status">Status: Upcoming</div>
+                    <div class="driver">Driver: Fred</div>
+                    <div class="buttons">
+                        <button id="show" onclick="showInfo(event);">Show More</button>
+                        <button>Leave a Note</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

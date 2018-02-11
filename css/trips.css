@@ -1,0 +1,86 @@
+body {
+  z-index: -2;
+  background-color: gray;
+  background-image: url('https://maps.googleapis.com/maps/api/staticmap?center=La+Jolla&zoom=10&size=2048x1152&maptype=roadmap&key=AIzaSyCGCKZWjbJ7E1cgRiD5r748YZvDtFkLaLY');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.decline{
+  color: black;
+  background-color: white;
+  border: 1px solid #8f78bd;
+}
+
+.trip {
+  margin-top: 25px;
+}
+
+.info {
+  overflow: hidden;
+  padding: 15px;
+  margin: 0px auto;
+  width: 75%;
+  background-color: white;
+  border-radius: 3px;
+}
+
+.info button {
+  margin-top: 20px;
+  margin-right: 10px;
+  float: right;
+}
+
+.info::after {
+  clear: right;
+}
+
+.info form::after {
+  clear: right;
+}
+
+.chat {
+  overflow-y: scroll;
+  overflow-x: none;
+  height: 100px;
+  padding: 15px;
+  margin: 0px auto;
+  width: 75%;
+  background-color: lightgrey;
+  border: 1px solid #8e77bc;
+  border-radius: 0px 0px 3px 3px;
+}
+
+.location {
+  display: inline-block;
+}
+
+.date {
+  display: block;
+  float: right;
+}
+
+.status {
+  clear: both;
+  display: block;
+}
+
+.buttons::after {
+  clear:left;
+}
+
+.buttons button {
+  display: inline-block;
+  float: none;
+}
+
+@media screen and (max-width: 768px) {
+  .info {
+    width: 90%;
+  }
+
+  .chat {
+    width: 90%;
+  }
+}

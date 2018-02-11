@@ -1,0 +1,80 @@
+body {
+    z-index: -2;
+    background-color: gray;
+    background-image: url('https://maps.googleapis.com/maps/api/staticmap?center=La+Jolla&zoom=10&size=2048x1152&maptype=roadmap&key=AIzaSyCGCKZWjbJ7E1cgRiD5r748YZvDtFkLaLY');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#bar {
+    z-index: 2;
+}
+
+#overlay {
+    z-index: -1;
+    background-color: black;
+    opacity: 0.5;
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    width: 100%;
+    height: 100%;
+}
+
+#start-form {
+    margin-top: 10px;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+#start-form input {
+    margin-bottom: 15px;
+}
+
+#start-form label {
+    font-size: 15px;
+}
+
+#start-form::after {
+    clear: right;
+}
+
+#start-box {
+    z-index: 2;
+    height: 200px;
+    width: 40%;
+    background-color: white;
+}
+
+#continue-button {
+    position: relative;
+    padding-top: 10px;
+    margin-right: 20px;
+    float: right;
+    bottom: 0px;
+    height: 40px;
+    width: 100px;
+    vertical-align: bottom;
+}
+
+.radio-input {
+    padding-top: 10px;
+    padding-left: 20px;
+}
+
+li {
+    display: block;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        background-position: center;
+        background-size: auto 100%;
+    }
+    
+    #start-box {
+        width: 90%;
+    }
+}
+
