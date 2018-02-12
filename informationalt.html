@@ -32,23 +32,24 @@
             <form id="info-form" method="GET" action="./search.html">
                 <div class="text-input">
                     <label for="_depart">Departing From:</label>
-                    <input type="text" id="_depart" name="depart" value="">
+                    <input type="text" id="_depart" name="depart" value="" required>
                 </div>
                 <div class="text-input">
                     <label for="_dest">Destination:</label>
-                    <input type="text" id="_dest" name="dest" value="">
+                    <input type="text" id="_dest" name="dest" value="" required>
                 </div>
                 <div class="date-input">
                     <label for="_date">Date of Trip:</label>
-                    <input type="date" id="_date" name="date" value="">
+                    <input type="date" id="_date" name="date" value="" required>
                 </div>
                 <div class="num-input">
                     <label for="_seats">Number of Seats Needed:</label>
-                    <input type="number" id="_seats" name="seats" placeholder="1">
+                    <input type="number" id="_seats" name="seats" placeholder="1"
+                    required>
                 </div>
                 <div class="tel-input">
                     <label for="_tel">Phone Number:</label>
-                    <input type="tel" id="_tel" name="tel" value="">
+                    <input type="tel" id="_tel" name="tel" value="" required>
                 </div>
                 <div class="note-input">
                     <label id="notes_label" for="_notes">Notes:</label>

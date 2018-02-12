@@ -31,23 +31,28 @@
             <form id="info-form" method="GET" action="./trips.html">
                 <div class="text-input">
                     <label for="_depart">Departing From:</label>
-                    <input id="_depart" type="text" name="depart">
+                    <input id="_depart" type="text" name="depart" required>
                 </div>
                 <div class="text-input">
                     <label for="_dest">Destination:</label>
-                    <input id="_dest" type="text" name="dest">
+                    <input id="_dest" type="text" name="dest" required>
                 </div>
                 <div class="date-input">
                     <label for="_date">Date of Trip:</label>
-                    <input type="date" id="_date" name="date">
+                    <input type="date" id="_date" name="date" required>
                 </div>
                 <div class="text-input">
                     <label for="_type">Type of Car:</label>
-                    <input type="text" id="_type" name="type">
+                    <input type="text" id="_type" name="type" required>
+                </div>
+                <div class="text-input">
+                    <label for="_carNo.">Car NO.:</label>
+                    <input type="text" id="_carNo." name="carNo." required>
                 </div>
                 <div class="num-input">
                     <label for="_seats">Number of Seats:</label>
-                    <input type="number" id="_seats" name="seats" placeholder="4">
+                    <input type="number" id="_seats" name="seats"
+                    placeholder="4" required>
                 </div>
                 <div class="tel-input">
                     <label for="_tel">Phone Number:</label>
