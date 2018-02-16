@@ -35,7 +35,7 @@
                 var container = document.getElementById("results");
                 var res = document.createElement("div");
                 res.className = "result";
-                res.onclick="window.location.href='trips.html';";
+                res.onclick= function(){window.location.href='trips.html';};
                 var date = document.createElement("div");
                 date.className = "date";
                 date.innerHTML = in_date;

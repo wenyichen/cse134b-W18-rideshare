@@ -90,11 +90,24 @@ body {
   float: right;
 }
 
-.location {
-  clear: right;
+.chevron {
+  margin: 10px;
+  font-size: 1.3em;
   display: inline-block;
-  font-size: 35px;
-  font-weight: bold;
+}
+
+.depart {
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.dest {
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: inline-block;
 }
 
 .date {
@@ -115,7 +128,6 @@ body {
 }
 
 .buttons button {
-  display: inline-block;
   float: right;
   width: auto;
 }
