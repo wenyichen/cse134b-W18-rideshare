@@ -135,7 +135,7 @@
                         str += " " + element.user + ": " + element.text;
                         break;
                         case "todo":
-                        str += "Upcoming: " + element.text;
+                        str += " Upcoming: " + element.text;
                         break;
                         default:
                         str += ": Error"
@@ -297,9 +297,8 @@
                 }
             }
             var message = document.createElement("div");
-            message.innerHTML = "FillerName "
-                                + new Date().toLocaleString()
-                                + ": " + content;
+            message.innerHTML = new Date().toLocaleString()
+                                + " FillerName: " + content;
             var ind = -1;
             for (var i = chat.childNodes.length-1; i >=0; i--) {
                 if (chat.childNodes[i].className == "todo"){
