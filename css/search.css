@@ -12,25 +12,25 @@ body {
 }
 
 .decline{
-color: black;
-background-color: white;
-border: 1px solid #8f78bc;
+  color: black;
+  background-color: white;
+  border: 1px solid #8f78bc;
 }
 
 .result {
-overflow: hidden;
-width: 80%;
-padding: 20px;
-margin: 10px auto;
-background-color: white;
-border: 1px solid #604c8d;
-border-radius: 3px;
+  overflow: hidden;
+  width: 80%;
+  padding: 20px;
+  margin: 10px auto;
+  background-color: white;
+  border: 1px solid #604c8d;
+  border-radius: 3px;
 }
 
 .result button {
-margin-top: 20px;
-margin-right: 10px;
-float: right;
+  margin-top: 20px;
+  margin-right: 10px;
+  float: right;
 }
 
 .result:hover{
@@ -40,25 +40,40 @@ float: right;
 }
 
 .result::after {
-clear: right;
+  clear: right;
 }
 
 .result form::after {
-clear: right;
+  clear: right;
 }
 
-.location {
-display: inline-block;
+.chevron {
+  font-size: 1.3em;
+  display: inline-block;
+}
+
+.depart {
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.dest {
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: inline-block;
 }
 
 .date {
-display: block;
-float: right;
+  display: block;
+  float: right;
 }
 
 .status {
-clear: both;
-display: block;
+  clear: both;
+  display: block;
 }
 
 #bar2 {

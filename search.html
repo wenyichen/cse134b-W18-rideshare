@@ -7,12 +7,72 @@
         <title> Ride with shuuu </title>
         <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link href="./open-iconic/font/css/open-iconic-bootstrap.css" rel="stylesheet">
         <link rel="stylesheet" href="./css/main.css" type="text/css" media="screen"/>
         <link rel="stylesheet" href="./css/search.css" type="text/css" media="screen"/>
-    </head>
-    <script>
+        <script>
+            window.onload = function populate () {
+                data = [{date: "1/1/19", 
+                         depart: "LONG_ADDRESS1",
+                         dest: "LONG_ADDRESS2",
+                         price: 25,
+                         seats: 4,
+                         seatsleft: 1,
+                         driver: "DRIVER_NAME1"},
+                         {date: "2/2/19", 
+                         depart: "LONG_ADDRESS3",
+                         dest: "LONG_ADDRESS4",
+                         price: 70,
+                         seats: 7,
+                         seatsleft: 4,
+                         driver: "DRIVER_NAME2"}]
+                data.forEach(function(element){
+                    addResult(element.date, element.depart, element.dest, element.price, element.seats, element.seatsleft, element.driver);
+                });
+            }
 
-    </script>
+            function addResult (in_date, in_depart, in_dest, in_price, in_seats, in_seatsleft, in_driver) {
+                var container = document.getElementById("results");
+                var res = document.createElement("div");
+                res.className = "result";
+                res.onclick="window.location.href='trips.html';";
+                var date = document.createElement("div");
+                date.className = "date";
+                date.innerHTML = in_date;
+                var depart = document.createElement("div");
+                depart.className = "depart";
+                depart.innerHTML = in_depart;
+                var chev = document.createElement("div");
+                chev.className = "chevron oi oi-chevron-right";
+                chev.setAttribute("title", ">");
+                chev.setAttribute("aria-hidden", "true");
+                var dest = document.createElement("div");
+                dest.className = "dest";
+                dest.innerHTML = in_dest;
+                var price = document.createElement("div");
+                price.className = "price";
+                price.innerHTML = "Price: $" + in_price;
+                var seats = document.createElement("div");
+                seats.className = "seats";
+                seats.innerHTML = "Seats: " + in_seats;
+                var seatsleft = document.createElement("div");
+                seatsleft.className = "seatsleft";
+                seatsleft.innerHTML = "Seats Left: " + in_seatsleft;
+                var driver = document.createElement("div");
+                driver.className = "driver";
+                driver.innerHTML = "Driver: " + in_driver;
+                res.appendChild(date);
+                res.appendChild(depart);
+                res.appendChild(chev);
+                res.appendChild(dest);
+                res.appendChild(price);
+                res.appendChild(seats);
+                res.appendChild(seatsleft);
+                res.appendChild(driver);
+                container.appendChild(res);
+            }
+        </script>
+    </head>
     <body>
         <div id="bar">
       	    <div id="title">
@@ -31,22 +91,6 @@
             </div>
         </div>
         <div id="results">
-            <div class="result" onclick="window.location.href='trips.html';">
-                <div class="location">LA 1234 Main St -> SD 1234 2nd St</div>
-                <div class="date">12/1/19</div>
-                <div class="price">Price: $30</div>
-                <div class="seats">Seats: 5</div>
-                <div class="seatsleft">Seats Left: 2</div>
-                <div class="Driver">Driver: John</div>
-            </div>
-            <div class="result" onclick="window.location.href='trips.html';">
-                <div class="location">LA 1234 Char St -> SD 1234 Double St</div>
-                <div class="date">4/1/19</div>
-                <div class="price">Price: $25</div>
-                <div class="seats">Seats: 3</div>
-                <div class="seatsleft">Seats Left: 1</div>
-                <div class="Driver">Driver: Bob</div>
-            </div>
         </div>
     </body>
 </html>
