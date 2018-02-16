@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="./css/main.css" type="text/css" media="screen"/>
         <link rel="stylesheet" href="./css/trips.css" type="text/css" media="screen"/>
         <script>
+            var mesg = 0;
             function showInfo(event) {
                 var elem = event.target;
                 var trip = elem.parentElement.parentElement.parentElement;
@@ -22,13 +23,23 @@
                     }
                 }
 
-                if (elem.innerHTML == "Show More") {
-                    elem.innerHTML = "Show Less";
+                if (elem.innerHTML.indexOf("Show More") !== -1) {
+                    elem.innerHTML = elem.innerHTML.replace("Show More","Show Less");
                     chat.style.display = "block";
+                    mesg = 0;
+                    show_newMesg();
                 } else {
-                    elem.innerHTML = "Show More";
+                    elem.innerHTML = elem.innerHTML.replace("Show Less","Show More");
                     chat.style.display = "none";
                 }
+            }
+            function show_newMesg() {
+              if (mesg) {
+                document.getElementById("new_mesg").innerHTML = mesg;
+                document.getElementById("new_mesg").style.display = "inline";
+              } else {
+                document.getElementById("new_mesg").style.display = "none";
+              }
             }
         </script>
     </head>
@@ -54,7 +65,7 @@
                     <div class="status">Status: In Progress</div>
                     <div class="driver">Driver: John</div>
                     <div class="buttons">
-                        <button id="show" onclick="showInfo(event);">Show More</button>
+                        <button class="show" onclick="showInfo(event);">Show More</button>
                     </div>
                 </div>
             </div>
@@ -62,10 +73,11 @@
                 <div class="info">
                     <div class="location">LA 1234 Main St -> SD 1234 2nd St</div>
                     <div class="date">12/19/19</div>
-                    <div class="status">Status: Currently have 2 passengers</div>
+                    <div class="status">Status: Need Two Riders</div>
                     <div class="driver">Driver: You!</div>
                     <div class="buttons">
-                        <button id="show" onclick="showInfo(event);">Show Less</button>
+                        <button class="show" onclick="showInfo(event);">Show Less
+                        <span id="new_mesg" class="badge badge-light"></span></button>
                         <button onclick="window.location.href='inprog.html';">Start Trip</button>
                     </div>
                 </div>
@@ -94,7 +106,7 @@
                     <div class="status">Status: Upcoming</div>
                     <div class="driver">Driver: Fred</div>
                     <div class="buttons">
-                        <button id="show" onclick="showInfo(event);">Show More</button>
+                        <button class="show" onclick="showInfo(event);">Show More</button>
                     </div>
                 </div>
             </div>
@@ -134,11 +146,45 @@
                     break;
                 }
             }
+            trip = button.parentElement.parentElement;
+            console.log(trip.className);
+            var info = null;
+            for (var i = 0; i < trip.childNodes.length; i++) {
+                if (trip.childNodes[i].className == "info") {
+                    info = trip.childNodes[i];
+                    break;
+                }
+            }
+            console.log(info.className);
+            var buttons = null;
+            for (var i = 0; i < info.childNodes.length; i++) {
+                if (info.childNodes[i].className == "buttons") {
+                    buttons = info.childNodes[i];
+                    break;
+                }
+            }
+            console.log(buttons.className);
+            var show = null;
+            for (var i = 0; i < buttons.childNodes.length; i++) {
+                if (buttons.childNodes[i].className == "show") {
+                    show = buttons.childNodes[i];
+                    break;
+                }
+            }
+            console.log(show.className);
             if (ind != -1) {
-                chat.insertBefore(message, chat.childNodes[ind])
+                chat.insertBefore(message, chat.childNodes[ind]);
+                if (show.innerHTML.indexOf("Show More") != -1) {
+                    mesg++;
+                    show_newMesg();
+                }
             }
             else {
                 chat.appendChild(message);
+                if (show.innerHTML.indexOf("Show More") != -1) {
+                    mesg++;
+                    show_newMesg();
+                }
             }
         }
     </script>
