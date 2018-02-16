@@ -15,12 +15,21 @@ button {
     text-align: center;
 }
 
+#middlebar:hover {
+    padding: 15px;
+}
+
+#middlebar:hover a {
+    font-size: 200px;
+}
+
 #middlebar a {
     color: white;
     font-weight: 700;
     font-size: 175px;
     text-decoration:  none;
 }
+
 
 #middlebar {
     text-align: center;
@@ -54,5 +63,13 @@ label {
 
     #middlebar a {
         font-size: 100px;
+    }
+
+    #middlebar:hover {
+        padding: 15px;
+    }
+    
+    #middlebar:hover a {
+        font-size: 125px;
     }
 }
