@@ -7,9 +7,170 @@
         <title> Ride with shuuu </title>
         <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link href="./open-iconic/font/css/open-iconic-bootstrap.css" rel="stylesheet">
         <link rel="stylesheet" href="./css/main.css" type="text/css" media="screen"/>
         <link rel="stylesheet" href="./css/trips.css" type="text/css" media="screen"/>
         <script>
+            window.onload = function populate () {
+                data = [
+                        {
+                        date: new Date().toDateString(),
+                        depart: "LONG_ADDRESS1",
+                        dest: "LONG_ADDRESS2",
+                        status: "Ready",
+                        driver: "DRIVER_NAME1",
+                        chats: [
+                            {   
+                                date: new Date(), 
+                                type: "notification",
+                                text: "Trip has been created!"
+                            },
+                            {   
+                                date: new Date(), 
+                                type: "notification",
+                                text: "You have been added to the trip (Driver)"
+                            },
+                            {   
+                                date: new Date(), 
+                                type: "notification",
+                                text: "James has requested to join the trip"
+                            },
+                            {   
+                                date: new Date(), 
+                                type: "notification",
+                                text: "You have approved James's request"
+                            },
+                            {   
+                                date: new Date(), 
+                                type: "notification",
+                                text: "James have been added to the trip"
+                            },
+                            {   
+                                date: new Date(), 
+                                type: "notification",
+                                text: "Sam has requested to join the trip"
+                            },
+                            {   
+                                date: new Date(), 
+                                type: "notification",
+                                text: "You have approved Sam's request"
+                            },
+                            {   
+                                date: new Date(), 
+                                type: "notification",
+                                text: "Sam have been added to the trip"
+                            },
+                            {   
+                                date: new Date(), 
+                                type: "message",
+                                text: "Hi!",
+                                user: "You"
+                            },
+                            {   
+                                date: new Date(), 
+                                type: "message",
+                                text: "Hello!",
+                                user: "James"
+                            },
+                            {   
+                                date: new Date(), 
+                                type: "todo",
+                                text: "Trip is scheduled for 1/19/19."
+                            }]
+                        }
+                        ]
+                data.forEach(function(element){
+                    addTrip(element.date, element.depart, element.dest, element.status, element.driver, element.chats);
+                });
+            }
+
+            function addTrip (in_date, in_depart, in_dest, in_status, in_driver, in_chats) {
+                var container = document.getElementById("trips");
+                var trip = document.createElement("div");
+                trip.className = "trip";
+                var info = document.createElement("div");
+                info.className = "info";
+                var date = document.createElement("div");
+                date.className = "date";
+                date.innerHTML = in_date;
+                var depart = document.createElement("div");
+                depart.className = "depart";
+                depart.innerHTML = in_depart;
+                var chev = document.createElement("div");
+                chev.className = "chevron oi oi-chevron-right";
+                chev.setAttribute("title", ">");
+                chev.setAttribute("aria-hidden", "true");
+                var dest = document.createElement("div");
+                dest.className = "dest";
+                dest.innerHTML = in_dest;
+                var status = document.createElement("div");
+                status.className = "status";
+                status.innerHTML = "Status: " + in_status;
+                var driver = document.createElement("div");
+                driver.className = "driver";
+                driver.innerHTML = "Driver: " + in_driver;
+                var buttons = document.createElement("div");
+                buttons.className = "buttons";
+                var show = document.createElement("button");
+                show.className = "show";
+                show.onclick = function(){showInfo(event)};
+                show.innerHTML = "Show Less";
+                var start = document.createElement("button");
+                start.onclick = function(){window.location.href='inprog.html';};
+                start.innerHTML = "Start Trip";
+                var span = document.createElement("span");
+                span.id = "new_mesg";
+                span.className = "badge badge-light";
+                var chat = document.createElement("div");
+                chat.className = "chat";
+                in_chats.forEach(function(element) {
+                    var msg = document.createElement("div");
+                    msg.className = element.type;
+                    var str = element.date.toLocaleString();
+                    switch(element.type) {
+                        case "notification":
+                        str += ": " + element.text;
+                        break;
+                        case "message":
+                        str += " " + element.user + ": " + element.text;
+                        break;
+                        case "todo":
+                        str += "Upcoming: " + element.text;
+                        break;
+                        default:
+                        str += ": Error"
+                    }
+                    msg.innerHTML = str;
+                    chat.appendChild(msg);
+                })
+                var chatbar = document.createElement("div");
+                chatbar.className = "chatbar";
+                var input = document.createElement("input");
+                input.className="chatinput";
+                input.name="content";
+                input.setAttribute("type", "text");
+                var leavenote = document.createElement("button");
+                leavenote.setAttribute("type", "button");
+                leavenote.onclick=function(){addMessage(event)};
+                leavenote.innerHTML="Leave a Note";
+                trip.appendChild(info);
+                trip.appendChild(chat);
+                trip.appendChild(chatbar);
+                info.appendChild(date);
+                info.appendChild(depart);
+                info.appendChild(chev);
+                info.appendChild(dest);
+                info.appendChild(status);
+                info.appendChild(driver);
+                info.appendChild(buttons);
+                buttons.appendChild(show);
+                buttons.appendChild(start);
+                show.appendChild(span);
+                chatbar.append(input);
+                chatbar.append(leavenote);
+                container.appendChild(trip);
+            }
+
             var mesg = 0;
             function showInfo(event) {
                 var elem = event.target;
@@ -58,7 +219,7 @@
         <div id="overlay">
         </div>
         <div id="trips">
-            <div class="trip">
+            <!-- <div class="trip">
                 <div class="info">
                     <div class="location">LA 1234 Rand St -> SD 1234 Int St</div>
                     <div class="date">1/1/19</div>
@@ -109,7 +270,7 @@
                         <button class="show" onclick="showInfo(event);">Show More</button>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </body>
     <script>
@@ -147,7 +308,6 @@
                 }
             }
             trip = button.parentElement.parentElement;
-            console.log(trip.className);
             var info = null;
             for (var i = 0; i < trip.childNodes.length; i++) {
                 if (trip.childNodes[i].className == "info") {
@@ -155,7 +315,6 @@
                     break;
                 }
             }
-            console.log(info.className);
             var buttons = null;
             for (var i = 0; i < info.childNodes.length; i++) {
                 if (info.childNodes[i].className == "buttons") {
@@ -163,7 +322,6 @@
                     break;
                 }
             }
-            console.log(buttons.className);
             var show = null;
             for (var i = 0; i < buttons.childNodes.length; i++) {
                 if (buttons.childNodes[i].className == "show") {
@@ -171,7 +329,6 @@
                     break;
                 }
             }
-            console.log(show.className);
             if (ind != -1) {
                 chat.insertBefore(message, chat.childNodes[ind]);
                 if (show.innerHTML.indexOf("Show More") != -1) {
