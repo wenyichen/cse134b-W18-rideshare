@@ -18,8 +18,8 @@ body {
     background-color: black;
     opacity: 0.5;
     position: fixed;
-    top: 0; 
-    left: 0; 
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
 }
@@ -127,9 +127,14 @@ body {
   clear:left;
 }
 
-.buttons button {
+.show button {
   float: right;
   width: auto;
+}
+
+.swal-button-container button {
+  float: right;
+  background-color: #33235f;
 }
 
 @media screen and (max-width: 768px) {
