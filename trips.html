@@ -10,6 +10,15 @@
         <link href="./open-iconic/font/css/open-iconic-bootstrap.css" rel="stylesheet">
         <link rel="stylesheet" href="./css/main.css" type="text/css" media="screen"/>
         <link rel="stylesheet" href="./css/trips.css" type="text/css" media="screen"/>
+
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js">
+            window.onload = function endTrip(e) {
+                eve = e.target;
+                if (eve.innerHTML.indexOf("Start Trip") !== -1) {
+                    eve.innerHTML = eve.innerHTML.replace("Start Trip","End Trip");
+                }
+            }
+        </script>
         <script>
             window.onload = function populate () {
                 data = [
@@ -20,60 +29,60 @@
                         status: "Ready",
                         driver: "DRIVER_NAME1",
                         chats: [
-                            {   
-                                date: new Date(), 
+                            {
+                                date: new Date(),
                                 type: "notification",
                                 text: "Trip has been created!"
                             },
-                            {   
-                                date: new Date(), 
+                            {
+                                date: new Date(),
                                 type: "notification",
                                 text: "You have been added to the trip (Driver)"
                             },
-                            {   
-                                date: new Date(), 
+                            {
+                                date: new Date(),
                                 type: "notification",
                                 text: "James has requested to join the trip"
                             },
-                            {   
-                                date: new Date(), 
+                            {
+                                date: new Date(),
                                 type: "notification",
                                 text: "You have approved James's request"
                             },
-                            {   
-                                date: new Date(), 
+                            {
+                                date: new Date(),
                                 type: "notification",
                                 text: "James have been added to the trip"
                             },
-                            {   
-                                date: new Date(), 
+                            {
+                                date: new Date(),
                                 type: "notification",
                                 text: "Sam has requested to join the trip"
                             },
-                            {   
-                                date: new Date(), 
+                            {
+                                date: new Date(),
                                 type: "notification",
                                 text: "You have approved Sam's request"
                             },
-                            {   
-                                date: new Date(), 
+                            {
+                                date: new Date(),
                                 type: "notification",
                                 text: "Sam have been added to the trip"
                             },
-                            {   
-                                date: new Date(), 
+                            {
+                                date: new Date(),
                                 type: "message",
                                 text: "Hi!",
                                 user: "You"
                             },
-                            {   
-                                date: new Date(), 
+                            {
+                                date: new Date(),
                                 type: "message",
                                 text: "Hello!",
                                 user: "James"
                             },
-                            {   
-                                date: new Date(), 
+                            {
+                                date: new Date(),
                                 type: "todo",
                                 text: "Trip is scheduled for 1/19/19."
                             }]
@@ -116,8 +125,9 @@
                 show.onclick = function(){showInfo(event)};
                 show.innerHTML = "Show Less";
                 var start = document.createElement("button");
-                start.onclick = function(){window.location.href='inprog.html';};
                 start.innerHTML = "Start Trip";
+                //start.onclick = function(){swal("Shuuu----!", "You're on the way!")};
+                start.onclick = function(){endTrip(e)};
                 var span = document.createElement("span");
                 span.id = "new_mesg";
                 span.className = "badge badge-light";
