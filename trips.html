@@ -10,15 +10,8 @@
         <link href="./open-iconic/font/css/open-iconic-bootstrap.css" rel="stylesheet">
         <link rel="stylesheet" href="./css/main.css" type="text/css" media="screen"/>
         <link rel="stylesheet" href="./css/trips.css" type="text/css" media="screen"/>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
-        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js">
-            window.onload = function endTrip(e) {
-                eve = e.target;
-                if (eve.innerHTML.indexOf("Start Trip") !== -1) {
-                    eve.innerHTML = eve.innerHTML.replace("Start Trip","End Trip");
-                }
-            }
-        </script>
         <script>
             window.onload = function populate () {
                 data = [
@@ -93,6 +86,14 @@
                 });
             }
 
+            function endTrip(e) {
+                eve = e.target;
+                if (eve.innerHTML.indexOf("Start Trip") !== -1) {
+                    eve.innerHTML = eve.innerHTML.replace("Start Trip","End Trip");
+                    return (swal("Shuuu----!", "You're on the way!"));
+                }
+            }
+
             function addTrip (in_date, in_depart, in_dest, in_status, in_driver, in_chats) {
                 var container = document.getElementById("trips");
                 var trip = document.createElement("div");
@@ -126,8 +127,7 @@
                 show.innerHTML = "Show Less";
                 var start = document.createElement("button");
                 start.innerHTML = "Start Trip";
-                //start.onclick = function(){swal("Shuuu----!", "You're on the way!")};
-                start.onclick = function(){endTrip(e)};
+                start.onclick = function(){endTrip(event)};
                 var span = document.createElement("span");
                 span.id = "new_mesg";
                 span.className = "badge badge-light";
