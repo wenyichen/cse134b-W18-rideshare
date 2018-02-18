@@ -149,6 +149,12 @@
                 input.className="chatinput";
                 input.name="content";
                 input.setAttribute("type", "text");
+                input.addEventListener("keypress", function(e) {
+                    if (e.key === "Enter") {
+                        event.preventDefault();
+                        addMessage(e);
+                    }
+                });
                 var leavenote = document.createElement("button");
                 leavenote.setAttribute("type", "button");
                 leavenote.onclick=function(){addMessage(event)};
