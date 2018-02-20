@@ -11,8 +11,7 @@
         <link rel="stylesheet" href="./css/main.css" type="text/css" media="screen"/>
         <link rel="stylesheet" href="./css/search.css" type="text/css" media="screen"/>
         <script>
-            window.onload = function populate () {
-                data = [{date: "1/1/19", 
+            data = [{date: "1/1/19", 
                          depart: "LONG_ADDRESS1",
                          dest: "LONG_ADDRESS2",
                          price: 25,
@@ -26,6 +25,7 @@
                          seats: 7,
                          seatsleft: 4,
                          driver: "DRIVER_NAME2"}]
+            window.onload = function populate () {
                 data.forEach(function(element){
                     addResult(element.date, element.depart, element.dest, element.price, element.seats, element.seatsleft, element.driver);
                 });
